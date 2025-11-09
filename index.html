@@ -19,7 +19,7 @@
       position: relative;
     }
 
-    /* 반짝이는 배경효과 (luxury 느낌) */
+    /* 배경 별빛 질감 */
     body::before {
       content: "";
       position: absolute;
@@ -30,13 +30,42 @@
       z-index: 0;
     }
 
+    /* 오타니 이미지 (왼쪽) */
+    .bg-left {
+      position: absolute;
+      top: 0; left: 0;
+      width: 50%;
+      height: 100%;
+      background: url('오타니.jpg') center right / cover no-repeat;
+      opacity: 0.25;
+      z-index: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* 듀란트 이미지 (오른쪽) */
+    .bg-right {
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('듀란트.jpg') center left / cover no-repeat;
+      opacity: 0.25;
+      z-index: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* 마우스 올리면 인물 강조 */
+    .bg-left:hover, .bg-right:hover {
+      opacity: 0.45;
+    }
+
     h1 {
       font-size: 2.6rem;
       margin-top: 180px;
       color: #f1c40f;
       text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     p {
@@ -44,7 +73,7 @@
       margin-bottom: 40px;
       color: #ddd;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     a {
@@ -59,7 +88,7 @@
       transition: all 0.3s ease;
       margin: 8px;
       position: relative;
-      z-index: 1;
+      z-index: 2;
       box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
     }
 
@@ -75,11 +104,24 @@
       width: 100%;
       color: #777;
       font-size: 0.9rem;
-      z-index: 1;
+      z-index: 2;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 768px) {
+      .bg-left, .bg-right {
+        display: none;
+      }
+      body {
+        background: radial-gradient(circle at top, #111, #000);
+      }
     }
   </style>
 </head>
 <body>
+  <div class="bg-left"></div>
+  <div class="bg-right"></div>
+
   <h1>오타니 & 듀란트 VIP 비밀방 🔒</h1>
   <p>📱 구글스토어에서 텔레그램을 설치한 후 아래 링크를 클릭하세요</p>
   <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank">텔레그램 다운로드 🚀</a>

@@ -3,55 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> VIP 비밀방</title>
+  <title>VIP 비밀방</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
+
     body {
-      background-color: #0a0a0a;
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
       font-family: "Pretendard", "Noto Sans KR", sans-serif;
+      color: #fff;
       text-align: center;
-      padding-top: 180px;
+      background: radial-gradient(circle at top, #1a1a1a, #000000);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
     }
+
+    /* 반짝이는 배경효과 (luxury 느낌) */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.15;
+      z-index: 0;
+    }
+
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
+      font-size: 2.6rem;
+      margin-top: 180px;
       color: #f1c40f;
+      text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+      position: relative;
+      z-index: 1;
     }
+
     p {
       font-size: 1.1rem;
       margin-bottom: 40px;
-      color: #cccccc;
+      color: #ddd;
+      position: relative;
+      z-index: 1;
     }
+
     a {
       display: inline-block;
       background: linear-gradient(90deg, #f39c12, #e67e22);
       color: white;
       text-decoration: none;
       padding: 15px 35px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 1.2rem;
       font-weight: bold;
       transition: all 0.3s ease;
+      margin: 8px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
     }
+
     a:hover {
       background: linear-gradient(90deg, #f1c40f, #e67e22);
-      transform: scale(1.05);
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(241, 196, 15, 0.8);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      color: #777;
+      font-size: 0.9rem;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
-  <h1>오타니&듀란트 VIP 비밀방 🔒</h1>
-  <p>구글스토어에 텔레그램 검색후 다운로드 하시면 됩니다</p>
-  <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank">텔레그램 다운로드🚀</a>
-  <p>VIP방 입장 문의는 아래 텔레그램 링크를 클릭하세요.</p>
-  <a href="https://t.me/OTN09" target="_blank">오타니 상담🚀</a>
+  <h1>오타니 & 듀란트 VIP 비밀방 🔒</h1>
+  <p>📱 구글스토어에서 텔레그램을 설치한 후 아래 링크를 클릭하세요</p>
+  <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank">텔레그램 다운로드 🚀</a>
+  <p>VIP방 입장 문의 ↓</p>
+  <a href="https://t.me/OTN09" target="_blank">오타니 상담 🚀</a>
+  <a href="https://t.me/nn72x" target="_blank">듀란트 상담 🚀</a>
 
-  <a href="https://t.me/nn72x" target="_blank">듀란트 상담🚀</a>
+  <footer>© 2025 오타니VIP. All rights reserved.</footer>
 </body>
 </html>
-
-
-
-
-
-
